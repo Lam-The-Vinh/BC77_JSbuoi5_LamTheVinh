@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./css/output.css" />
+  </head>
+  <body>
+    <!-- bài tập quản lý tuyển sinh  -->
+    <div class="container mx-auto">
+      <h1 class="text-red-500 text-2xl">bài tập quản lý tuyển sinh</h1>
+      <div class="grid items-end gap-6 mb-6 md:grid-cols-3">
+        <div class="relative">
+          <input
+            type="text"
+            id="diemChuan"
+            class="block rounded-t-lg px-2.5 pb-1.5 pt-4 w-full text-sm text-gray-900 bg-gray-50 dark:bg-gray-700 border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+            placeholder=" "
+          />
+          <label
+            for="small_filled"
+            class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-3 scale-75 top-3 z-10 origin-[0] start-2.5 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-3 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto"
+            >Điểm Chuẩn</label
+          >
+        </div>
+
+        <button
+          id="dropdownHelperRadioButton"
+          data-dropdown-toggle="dropdownHelperRadio"
+          class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+          type="button"
+        >
+          Chọn khu vực
+          <svg
+            class="w-2.5 h-2.5 ms-2.5"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 10 6"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="m1 1 4 4 4-4"
+            />
+          </svg>
+        </button>
+
+        <!-- Dropdown menu -->
+        <div
+          id="dropdownHelperRadio"
+          class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-60 dark:bg-gray-700 dark:divide-gray-600"
+          data-popper-reference-hidden=""
+          data-popper-escaped=""
+          data-popper-placement="top"
+          style="
+            position: absolute;
+            inset: auto auto 0px 0px;
+            margin: 0px;
+            transform: translate3d(522.5px, 6119.5px, 0px);
+          "
+        >
+          <ul
+            class="p-3 space-y-1 text-sm text-gray-700 dark:text-gray-200"
+            aria-labelledby="dropdownHelperRadioButton"
+          >
+            <li>
+              <div
+                class="flex p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-600"
+              >
+                <div class="flex items-center h-5">
+                  <input
+                    id="koThuocKhuVuc"
+                    name="selector1"
+                    type="radio"
+                    value="ko"
+                    class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
+                  />
+                </div>
+                <div class="ms-2 text-sm">
+                  <label
+                    for="koThuocKhuVuc"
+                    class="font-medium text-gray-900 dark:text-gray-300"
+                  >
+                    <div>không thuộc khu vực nào</div>
+                  </label>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div
+                class="flex p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-600"
+              >
+                <div class="flex items-center h-5">
+                  <input
+                    id="khuVucA"
+                    name="selector1"
+                    type="radio"
+                    value="A"
+                    class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
+                  />
+                </div>
+                <div class="ms-2 text-sm">
+                  <label
+                    for="khuVucA"
+                    class="font-medium text-gray-900 dark:text-gray-300"
+                  >
+                    <div>A</div>
+                  </label>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div
+                class="flex p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-600"
+              >
+                <div class="flex items-center h-5">
+                  <input
+                    id="khuVucB"
+                    name="selector1"
+                    type="radio"
+                    value="B"
+                    class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
+                  />
+                </div>
+                <div class="ms-2 text-sm">
+                  <label
+                    for="khuVucB"
+                    class="font-medium text-gray-900 dark:text-gray-300"
+                  >
+                    <div>B</div>
+                  </label>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div
+                class="flex p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-600"
+              >
+                <div class="flex items-center h-5">
+                  <input
+                    id="khuVucC"
+                    name="selector1"
+                    type="radio"
+                    value="C"
+                    class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
+                  />
+                </div>
+                <div class="ms-2 text-sm">
+                  <label
+                    for="khuVucC"
+                    class="font-medium text-gray-900 dark:text-gray-300"
+                  >
+                    <div>C</div>
+                  </label>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <button
+          id="dropdownRadioButton"
+          data-dropdown-toggle="dropdownDefaultRadio"
+          class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+          type="button"
+        >
+          Chọn đối tượng
+          <svg
+            class="w-2.5 h-2.5 ms-3"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 10 6"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="m1 1 4 4 4-4"
+            />
+          </svg>
+        </button>
+
+        <!-- Dropdown menu -->
+        <div
+          id="dropdownDefaultRadio"
+          class="z-10 hidden w-48 bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600"
+        >
+          <ul
+            class="p-3 space-y-3 text-sm text-gray-700 dark:text-gray-200"
+            aria-labelledby="dropdownRadioButton"
+          >
+            <li>
+              <div class="flex items-center">
+                <input
+                  id="koThuocDoiTuong"
+                  type="radio"
+                  value="0"
+                  name="selector"
+                  class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
+                />
+                <label
+                  for="koThuocDoiTuong"
+                  class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                  >Không thuộc đối tượng nào</label
+                >
+              </div>
+            </li>
+
+            <li>
+              <div class="flex items-center">
+                <input
+                  id="doiTuong1"
+                  type="radio"
+                  value="1"
+                  name="selector"
+                  class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
+                />
+                <label
+                  for="doiTuong1"
+                  class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                  >1</label
+                >
+              </div>
+            </li>
+            <li>
+              <div class="flex items-center">
+                <input
+                  checked
+                  id="doiTuong2"
+                  type="radio"
+                  value="2"
+                  name="selector"
+                  class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
+                />
+                <label
+                  for="doiTuong2"
+                  class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                  >2</label
+                >
+              </div>
+            </li>
+            <li>
+              <div class="flex items-center">
+                <input
+                  id="doiTuong3"
+                  type="radio"
+                  value="3"
+                  name="selector"
+                  class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
+                />
+                <label
+                  for="doiTuong3"
+                  class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                  >3</label
+                >
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="relative">
+          <input
+            type="text"
+            id="diem1"
+            class="block rounded-t-lg px-2.5 pb-1.5 pt-4 w-full text-sm text-gray-900 bg-gray-50 dark:bg-gray-700 border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+            placeholder=" "
+          />
+          <label
+            for="small_filled"
+            class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-3 scale-75 top-3 z-10 origin-[0] start-2.5 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-3 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto"
+            >Điểm môn thứ 1</label
+          >
+        </div>
+        <div class="relative">
+          <input
+            type="text"
+            id="diem2"
+            class="block rounded-t-lg px-2.5 pb-1.5 pt-4 w-full text-sm text-gray-900 bg-gray-50 dark:bg-gray-700 border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+            placeholder=" "
+          />
+          <label
+            for="small_filled"
+            class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-3 scale-75 top-3 z-10 origin-[0] start-2.5 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-3 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto"
+            >Điểm môn thứ 2</label
+          >
+        </div>
+        <div class="relative">
+          <input
+            type="text"
+            id="diem3"
+            class="block rounded-t-lg px-2.5 pb-1.5 pt-4 w-full text-sm text-gray-900 bg-gray-50 dark:bg-gray-700 border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+            placeholder=" "
+          />
+          <label
+            for="small_filled"
+            class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-3 scale-75 top-3 z-10 origin-[0] start-2.5 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-3 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto"
+            >Điểm môn thứ 3</label
+          >
+        </div>
+      </div>
+      <button id="ketQua" class="bg-red-500 p-4 mt-5" onclick="tinhKetQua()">
+        Kết Quả
+      </button>
+      <div id="thongBao"></div>
+    </div>
+    <br /><br /><br /><br /><br />
+
+    <!-- bài tập tính tiền điện  -->
+    <div class="container mx-auto">
+      <h1 class="text-blue-500 text-2xl">bài tập tính tiền điện</h1>
+      <div class="relative">
+        <input
+          type="text"
+          id="hoTen"
+          class="block rounded-t-lg px-2.5 pb-1.5 pt-4 w-full text-sm text-gray-900 bg-gray-50 dark:bg-gray-700 border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+          placeholder=" "
+        />
+        <label
+          for="small_filled"
+          class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-3 scale-75 top-3 z-10 origin-[0] start-2.5 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-3 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto"
+          >Nhập Họ Tên</label
+        >
+      </div>
+      <div class="relative">
+        <input
+          type="text"
+          id="soDien"
+          class="block rounded-t-lg px-2.5 pb-1.5 pt-4 w-full text-sm text-gray-900 bg-gray-50 dark:bg-gray-700 border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+          placeholder=" "
+        />
+        <label
+          for="small_filled"
+          class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-3 scale-75 top-3 z-10 origin-[0] start-2.5 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-3 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto"
+          >Nhập số Kw</label
+        >
+      </div>
+      <button id="tinh" class="bg-blue-500 p-4 mt-5" onclick="tinhTienDien()">
+        Tinh
+      </button>
+      <div id="result"></div>
+    </div>
+    <br /><br /><br /><br /><br />
+    <!-- bài tập tính tiền thuế thu nhập cá nhân  -->
+    <div class="container mx-auto">
+      <h1 class="text-gray-500 text-2xl">Tính tiền thuế thu nhập cá nhân</h1>
+      <div class="relative">
+        <input
+          type="text"
+          id="ten"
+          class="block rounded-t-lg px-2.5 pb-1.5 pt-4 w-full text-sm text-gray-900 bg-gray-50 dark:bg-gray-700 border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+          placeholder=" "
+        />
+        <label
+          for="small_filled"
+          class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-3 scale-75 top-3 z-10 origin-[0] start-2.5 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-3 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto"
+          >Nhập Họ Tên</label
+        >
+      </div>
+      <div class="relative">
+        <input
+          type="number"
+          id="thuNhapHangNam"
+          class="block rounded-t-lg px-2.5 pb-1.5 pt-4 w-full text-sm text-gray-900 bg-gray-50 dark:bg-gray-700 border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+          placeholder=" "
+        />
+        <label
+          for="small_filled"
+          class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-3 scale-75 top-3 z-10 origin-[0] start-2.5 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-3 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto"
+          >Tổng thu nhập năm</label
+        >
+      </div>
+      <div class="relative">
+        <input
+          type="text"
+          id="nguoiPhuThuoc"
+          class="block rounded-t-lg px-2.5 pb-1.5 pt-4 w-full text-sm text-gray-900 bg-gray-50 dark:bg-gray-700 border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+          placeholder=" "
+        />
+        <label
+          for="small_filled"
+          class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-3 scale-75 top-3 z-10 origin-[0] start-2.5 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-3 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto"
+          >Nhập số người phụ thuộc</label
+        >
+      </div>
+      <button
+        id="tienThue"
+        class="bg-green-500 p-4 mt-5"
+        onclick="tinhTienThue()"
+      >
+        Tinh
+      </button>
+      <div id="soTienThue"></div>
+    </div>
+    <br /><br /><br /><br /><br />
+
+    <!-- bài tập tính tiền cáp  -->
+    <div class="container mx-auto">
+      <h1 class="text-pink-500 text-2xl">Tính tiền cáp</h1>
+      <p>chọn loại khách hàng</p>
+      <select id="khachHang" onchange="showHide()">
+        <option value="khach">chọn loại khách hàng</option>
+        <option value="nhaDan">Nhà Dân</option>
+        <option value="doanhNghiep">Doanh Nghiệp</option>
+      </select>
+      <div class="relative">
+        <input
+          type="text"
+          id="maKhachHang"
+          class="block rounded-t-lg px-2.5 pb-1.5 pt-4 w-full text-sm text-gray-900 bg-gray-50 dark:bg-gray-700 border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+          placeholder=" "
+        />
+        <label
+          for="small_filled"
+          class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-3 scale-75 top-3 z-10 origin-[0] start-2.5 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-3 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto"
+          >Nhập Mã khách hàng</label
+        >
+      </div>
+      <div class="relative">
+        <input
+          type="text"
+          id="kenhCaoCap"
+          class="block rounded-t-lg px-2.5 pb-1.5 pt-4 w-full text-sm text-gray-900 bg-gray-50 dark:bg-gray-700 border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+          placeholder=" "
+        />
+        <label
+          for="small_filled"
+          class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-3 scale-75 top-3 z-10 origin-[0] start-2.5 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-3 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto"
+          >Nhập kênh cao cấp</label
+        >
+      </div>
+      <div class="relative d_none" id="eventShowHide">
+        <input
+          type="text"
+          id="ketNoi"
+          class="block rounded-t-lg px-2.5 pb-1.5 pt-4 w-full text-sm text-gray-900 bg-gray-50 dark:bg-gray-700 border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+          placeholder=" "
+        />
+        <label
+          for="small_filled"
+          class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-3 scale-75 top-3 z-10 origin-[0] start-2.5 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-3 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto"
+          >Số kết nối</label
+        >
+      </div>
+      <button id="" class="bg-pink-500 p-4 mt-5" onclick="tinhTienCap()">
+        Tinh
+      </button>
+      <div id="soTienCap"></div>
+    </div>
+    <br /><br /><br /><br /><br />
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+
+    <script src="./js/main.js"></script>
+  </body>
+</html>
